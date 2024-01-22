@@ -1,15 +1,21 @@
 import { Component } from '@angular/core';
-import {MatMenuModule} from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatMenuModule, MatIconModule, MatButtonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
 
+  animate: boolean = false;
+  containerPosition: string = 'translateX(0)';
+
+  switchMenu(){
+    this.containerPosition = this.containerPosition === 'translateX(-100vw)' ? 'translateX(0)' : 'translateX(-100vw)';
+    this.animate = !this.animate;
+  }
 }

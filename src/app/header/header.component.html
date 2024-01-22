@@ -5,23 +5,21 @@
         <a href="">Skill set</a>
         <a href="">My work</a>
     </div>
-    <img class="burgerMenuImg" src="../../assets/img/burger_menu.png" alt="burger_menu">
 
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-      </mat-menu>
+    <!-- Burger menu -->
+    <img (click)="switchMenu()" class="burgerMenuImg" src="../../assets/img/burger_menu.png" alt="burger_menu">
+
+    <div class="burgerMenuContainer" [ngStyle]="{ 'transform': containerPosition }">
+      <div class="burgerMenuHeader">
+        <img src="../../assets/img/hero/logo_green.png" alt="logo_green">
+
+        <div class="burgerMenuAnimation" [class.crossed]="animate" (click)="switchMenu()">
+          <img class="strokeTop stroke" src="../../assets/img/burger_menu_stroke.png" alt="">
+          <img class="strokeMiddle stroke" src="../../assets/img/burger_menu_stroke.png" alt="">
+          <img class="strokeBottom stroke" src="../../assets/img/burger_menu_stroke.png" alt="">
+        </div>
+
+      </div>
+    </div>
+
 </section>

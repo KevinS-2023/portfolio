@@ -1,6 +1,4 @@
 @import '../shared/shared.scss';
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
-
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -10,7 +8,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: lightgrey;
     padding: 24px 100px 0 100px;
 
     >img {
@@ -25,7 +22,7 @@ section {
 
     >a {
         text-decoration: none;
-        color: $green;
+        color: $mediumGreen;
         font-weight: 400;
         font-size: 24px;
 
@@ -35,26 +32,90 @@ section {
     }
 }
 
-.burgerMenuImg{
+.burgerMenuImg {
     display: none;
     width: 30px !important;
     height: 30px !important;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-@media(max-width: 720px){
+.burgerMenuContainer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 100vw;
+    background: linear-gradient(to bottom, white, $mediumGreen); 
+    transition: transform 0.9s ease; 
+}
 
-    section{
+.burgerMenuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px 0 32px;
+}
+
+.burgerMenuAnimation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 30px;
+    width: 30px;
+
+    >img {
+        width: 30px !important;
+        transition: transform 0.3s ease; 
+    }
+
+    .strokeTop {
+        transform-origin: top left;
+    }
+    
+    .strokeMiddle {
+        opacity: 1;
+    }
+    
+    .strokeBottom {
+        transform-origin: bottom left;
+    }
+
+    &.crossed {
+        .strokeTop {
+            transform: rotate(45deg);
+        }
+
+        .strokeMiddle {
+            opacity: 0;
+        }
+
+        .strokeBottom {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
+
+@media(max-width: 720px) {
+
+    section {
         padding: 24px 32px 0 32px;
     }
 }
 
-@media(max-width: 600px){
+@media(max-width: 600px) {
 
-    .linkContainer{
+    .linkContainer {
         display: none;
     }
 
-    .burgerMenuImg{
+    .burgerMenuImg {
         display: flex;
     }
 

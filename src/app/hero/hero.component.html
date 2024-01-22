@@ -1,0 +1,29 @@
+<section>
+
+    <div class="leftContainer">
+        <img class="ellipseImg" src="../../assets/img/hero/hero_ellipse.png" alt="hero_ellipse">
+    </div>
+
+    <div class="rightContainer">
+
+        <div class="rightContainerTop">
+            <h2>Hello! I am Kevin</h2>
+            <h1>Frontend</h1>
+            <h1>Developer</h1>
+        </div>
+
+        <div class="rightContainerBottom">
+            <div>
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+            <div class="linkContainer">
+                <img *ngFor="let path of links, let index" [src]="path" alt="" >
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<img class="circle" src="../../assets/img/circel_big.png" alt="circel_big">

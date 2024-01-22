@@ -1,0 +1,33 @@
+@import '../shared/shared.scss';
+
+
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom right, $mediumGreen, $darkGreen);
+    width: 100%;
+    padding: 200px 0;
+
+    >h3{
+        font-family: $baloo;
+        font-weight: 400;
+        font-size: 96px;
+        color: #ffffff;
+    }
+
+    >div{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc((5 * 86px) + (4 * 47px));
+        
+        height: 340px;
+        gap: 47px;
+
+        >img{
+            width: 86px;
+            height: 150px;
+        }
+    }
+}
