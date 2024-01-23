@@ -1,7 +1,8 @@
 export interface Project {
     path: string;
-    titel: string;
-    skills: string [];
-    text: string;
-    link: string;
+    title: string;
+    skills:string[];
+    description: string;
+    gitHubLink: string;
+    htmlLink: string;
 }

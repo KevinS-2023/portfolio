@@ -1,21 +1,25 @@
 <section>
 
     <div class="leftContainer">
-        <a href="{{htmlLink}}">
-            <img src="{{path}}" alt="{{title}}">
+        <a href="{{childData.htmlLink}}">
+            <img src="{{childData.path}}" alt="{{childData.title}}">
         </a>
     </div>
 
     <div class="rightContainer">
-        <h3>{{title}}</h3>
+        <h3>{{childData.title}}</h3>
 
         <div class="skillContainer">
-            <h4 *ngFor="let skill of skills">{{skill}}</h4>
+            <div *ngFor="let skill of childData.skills" class="skill">
+                <h4>{{skill}}</h4>
+                <div class="partingLine"></div>
+            </div>
+
         </div>
 
-        <p>{{description}}</p>
+        <p>{{childData.description}}</p>
 
-        <a href="{{gitHubLink}}"></a>
+        <a class="githubButton" href="{{childData.gitHubLink}}">Github</a>
     </div>
 
 </section>

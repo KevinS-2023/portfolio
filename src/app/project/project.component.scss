@@ -20,13 +20,19 @@ section{
     }
 }
 
+.leftContainer{
+    padding: 0 32px 0 32px;
+}
+
 .rightContainer{
     align-items: flex-start !important;
+    padding: 0 32px 0 32px;
 }
 
 .skillContainer{
     display: flex;
     align-items: center;
+    gap: 24px;
 }
 
 h3{
@@ -44,4 +50,32 @@ h4{
 p{
     font-family: $montserrat;
     font-size: 16px; 
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.partingLine{
+    width: 2px;
+    height: 24px;
+    background-color: $mediumGreen;
+    margin-bottom: 16px;
+}
+
+.githubButton{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $mediumGreen;
+    border-radius: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: $montserrat;
+    color: $mediumGreen;
+    font-size: 24px;
 }
