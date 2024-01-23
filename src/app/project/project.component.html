@@ -1,0 +1,21 @@
+<section>
+
+    <div class="leftContainer">
+        <a href="{{htmlLink}}">
+            <img src="{{path}}" alt="{{title}}">
+        </a>
+    </div>
+
+    <div class="rightContainer">
+        <h3>{{title}}</h3>
+
+        <div class="skillContainer">
+            <h4 *ngFor="let skill of skills">{{skill}}</h4>
+        </div>
+
+        <p>{{description}}</p>
+
+        <a href="{{gitHubLink}}"></a>
+    </div>
+
+</section>

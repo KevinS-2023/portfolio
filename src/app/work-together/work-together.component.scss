@@ -1,0 +1,61 @@
+@import '../shared/shared.scss';
+
+section {
+    display: flex;
+    min-height: 50vh;
+
+    >div {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.leftContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rightContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    background-color: transparent;
+    height: 58px;
+    border: 2px solid $mediumGreen;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    color: $mediumGreen;
+    font-family: $montserrat;
+    font-size: 24px;
+    margin-bottom: 160px;
+    transition: background 0.3s ease;
+
+    &:hover{
+        cursor: pointer;
+        background: linear-gradient(to bottom right, $mediumGreen, $mediumGreen);
+        color: white;
+    }
+}
+
+h1 {
+    font-family: $baloo;
+    font-weight: 400;
+    font-size: 121px;
+    color: $mediumGreen;
+    margin: 0;
+    line-height: 130px;
+}
+
+p {
+    font-family: $montserrat;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 160px 0 20px 0;
+}
