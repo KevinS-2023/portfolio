@@ -12,9 +12,9 @@ section {
 
 .leftContainer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    padding: 0 32px 0 10vw;
 }
 
 .rightContainer{
@@ -22,6 +22,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 10vw 0 32px;
 }
 
 button{

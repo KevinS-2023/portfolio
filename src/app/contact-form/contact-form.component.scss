@@ -1,0 +1,89 @@
+@import '../shared/shared.scss';
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    >textarea {
+        resize: none;
+    }
+}
+
+.formControlContainer {
+    border: 1px solid $mediumGreen;
+    border-radius: 10px;
+    font-family: $montserrat;
+    font-size: 16px;
+    padding: 0px 25px;
+    margin: 0.8px;
+    background-color: white;
+    
+
+    &:hover {
+        margin: 0;
+        border: 2px solid $mediumGreen;
+    }
+
+    &:focus-within{
+        padding: 6px 25px;
+
+        >p{
+            color: $mediumGreen;
+            display: flex;
+        }
+    }
+
+    >p {
+        font-size: 12px;
+        line-height: 18px;
+        display: none;
+        margin: 0;
+    }
+}
+
+.inputField {
+    width: 98%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: white;
+
+    &:focus{
+        height: 20px;
+
+        &::placeholder{
+           color: transparent;
+        }
+    }
+}
+
+textarea{
+    outline: none;
+    border: none;
+
+    &:focus{
+        
+
+        &::placeholder{
+           color: transparent;
+        }
+    }
+}
+
+
+/* For Chrome, Safari und Opera */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* For Firefox */
+input:-moz-autofill {
+    -moz-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* For Internet Explorer */
+input:-ms-autofill {
+    background-color: transparent !important;
+}

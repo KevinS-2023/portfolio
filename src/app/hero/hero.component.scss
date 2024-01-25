@@ -6,42 +6,43 @@ section {
     background: linear-gradient(to bottom, white, $lightGreen);
     display: flex;
 
-    .ellipseImg {
-        position: absolute;
-        width: 892px;
-        height: 892px;
-        top: -40%;
-        left: -30%;
-        z-index: 0;
-    }
-
     >div{
         height: 100vh;
     }
 }
 
-.rightContainer{
-    width: 60%;
+.bigCircle {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    border-radius: 100%;
+    top: -25vw;
+    left: -50vw;
+    z-index: 0;
+    background: linear-gradient(to bottom right, $mediumGreen, $darkGreen);
 }
 
-.leftContainer{
-    width: 40%;
+.rightContainer{
+    width: 50vw;
+    margin-left: 50vw;
+    padding-right: 10vw;
 }
 
 .rightContainerTop{
     width: 100%;
-    height: 40%;
-    padding-top: 20%;
+    height: 50vh;
     display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
     flex-direction: column;
 }
 
 .rightContainerBottom{
     width: 100%;
-    height: 40%;
+    height: 50vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
 
     >div{
         width: auto;
@@ -51,24 +52,28 @@ section {
         justify-content: center;
         flex-direction: column;
         gap: 25px;
-
-        >span{
-            font-family: $montserrat;
-            font-weight: 500;
-            font-size: 24px;
-            color: $mediumGreen;
-        }
     }
 }
 
-.line{
-    height: 70%;
-    width: 2px;
-    background-color: $mediumGreen;
+.scrollContainer{
+    margin-left: calc(32px + 103px);
+
+    >div{
+        height: 40vh;
+        width: 2px;
+        background-color: $mediumGreen;
+    }
+
+    >span{
+        font-family: $montserrat;
+        font-weight: 500;
+        font-size: 24px;
+        color: $mediumGreen;
+    }
 }
 
 h1 {
-    margin: 32px 32px 32px 64px;
+    margin: 0;
     font-family: $baloo;
     font-weight: 800;
     font-size: 128px;
@@ -76,14 +81,14 @@ h1 {
 }
 
 h2 {   
-    margin: 32px 32px 32px 64px; 
+    margin: 0; 
     font-family: $montserrat;
     font-weight: 400;
     font-size: 64px;
     color: $mediumGreen;
 }
 
-.circle{
+.smalCircle{
     width: 206px;
     height: 206px;
     position: absolute;
@@ -91,14 +96,111 @@ h2 {
     left: calc(50vw - 103px);
 }
 
+.portrait{
+    height: 80vh;
+    position: absolute;
+    top: 20vh;
+    left: 32px;
+}
+
 @media(max-width: 1400px){
     h1{
         font-size: 96px;
-        margin: 20px 20px 20px 40px;
+        line-height: 100px;
     }
 
     h2{
         font-size: 48px;
-        margin: 20px 20px 20px 40px;
+        line-height: 52px;
+    }
+}
+
+@media(max-width: 1150px){
+    h1{
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    h2{
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+@media(max-width: 1050px){
+    .rightContainer{
+        padding-right: 32px;
+    }
+    
+}
+
+@media(max-width: 650px){
+    h1{
+        font-size: 56px;
+        line-height: 60px;
+    }
+
+    h2{
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+
+// mobile devices
+@media(max-width: 550px){
+    section{
+        flex-direction: column-reverse;
+    }
+
+    .rightContainer{
+        margin: 0;
+        width: 100%;
+    }
+
+    .rightContainerTop{
+        align-items: center;
+        height: 50vh;
+    }
+
+    .rightContainerBottom{
+        height: 50vh;
+    }
+
+    h1{
+        font-size: 72px;
+        line-height: 76px;
+        color: white !important;
+        z-index: 1;
+    }
+
+    h2{
+        font-size: 36px;
+        line-height: 40px;
+        color: white !important;
+        z-index: 1;
+    }
+
+    .bigCircle {
+        width: 150vw !important;
+        height: 150vw !important;
+        top: -5vw !important;
+        left: -50vw !important;
+        z-index: 0 !important;
+    }
+
+    .portrait{
+        height: 50vh;
+        position: absolute;
+        top: 50vh;
+        left: 32px;
+    }
+
+    .scrollContainer{
+        display: none !important;
+    }
+
+    .linkContainer{
+        display: none !important;
     }
 }

@@ -5,4 +5,5 @@ export interface Project {
     description: string;
     gitHubLink: string;
     htmlLink: string;
+    reverse: string;
 }

@@ -12,5 +12,5 @@ import { Project } from '../interfaces/project.interface'
 export class ProjectComponent {
 
   @Input() childData!: Project;
-
+  
 }

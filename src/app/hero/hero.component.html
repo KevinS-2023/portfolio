@@ -1,9 +1,8 @@
 <section>
-
-    <div class="leftContainer">
-        <img class="ellipseImg" src="../../assets/img/hero/hero_ellipse.png" alt="hero_ellipse">
-    </div>
-
+    
+    <!-- big circle -->
+    <div class="bigCircle"></div>
+    
     <div class="rightContainer">
 
         <div class="rightContainerTop">
@@ -13,17 +12,24 @@
         </div>
 
         <div class="rightContainerBottom">
-            <div>
+
+            <div class="scrollContainer">
                 <span>Scroll</span>
-                <div class="line"></div>
+                <div></div>
             </div>
+
             <div class="linkContainer">
-                <img *ngFor="let path of links, let index" [src]="path" alt="" >
+                <img *ngFor="let path of links, let index" [src]="path" alt="">
             </div>
+
+            <!-- portrait -->
+            <img class="portrait" src="../../assets/img/hero/portrait.png" alt="">
+
         </div>
 
     </div>
 
 </section>
 
-<img class="circle" src="../../assets/img/circel_big.png" alt="circel_big">
+<!-- smal circle -->
+<img class="smalCircle" src="../../assets/img/circel_big.png" alt="circel_big">
