@@ -14,11 +14,18 @@
         <img src="../../assets/img/hero/logo_green.png" alt="logo_green">
 
         <div class="burgerMenuAnimation" [class.crossed]="animate" (click)="switchMenu()">
-          <img class="strokeTop stroke" src="../../assets/img/burger_menu_stroke.png" alt="">
-          <img class="strokeMiddle stroke" src="../../assets/img/burger_menu_stroke.png" alt="">
-          <img class="strokeBottom stroke" src="../../assets/img/burger_menu_stroke.png" alt="">
+          <div class="strokeTop stroke"></div>
+          <div class="strokeMiddle stroke"></div>
+          <div class="strokeBottom stroke"></div>
         </div>
 
+      </div>
+
+      <div class="mobileLinksContainer">
+        <a href="#aboutMe" (click)="switchMenu()">About me</a>
+        <a href="'#skillSet" (click)="switchMenu()">Skill set</a>
+        <a href="#myProjects" (click)="switchMenu()">My work</a>
+        <a href="#contact" (click)="switchMenu()">Contact</a>
       </div>
     </div>
 

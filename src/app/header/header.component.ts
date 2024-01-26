@@ -16,6 +16,9 @@ export class HeaderComponent {
 
   switchMenu(){
     this.containerPosition = this.containerPosition === 'translateX(-100vw)' ? 'translateX(0)' : 'translateX(-100vw)';
-    this.animate = !this.animate;
+    setTimeout(() => {
+      this.animate = !this.animate;
+    }, 1000)
+    
   }
 }

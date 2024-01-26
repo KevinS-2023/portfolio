@@ -11,31 +11,31 @@ section {
     padding: 24px 10vw 0 10vw;
 
     >img {
-        width: 64px;
-        height: 69px;
+        width: 40px;
+        height: 40px;
     }
 }
 
 .linkContainer {
     display: flex;
     gap: 36px;
+}
 
-    >a {
-        text-decoration: none;
-        color: $mediumGreen;
-        font-weight: 400;
-        font-size: 24px;
+a {
+    text-decoration: none;
+    color: $mediumGreen;
+    font-weight: 400;
+    font-size: 24px;
 
-        &:hover {
-            font-weight: 900;
-        }
+    &:hover {
+        font-weight: 900;
     }
 }
 
 .burgerMenuImg {
     display: none;
-    width: 30px !important;
-    height: 30px !important;
+    width: 30px;
+    height: 30px;
 
     &:hover {
         cursor: pointer;
@@ -48,7 +48,7 @@ section {
     height: 100vh;
     top: 0;
     left: 100vw;
-    background: linear-gradient(to bottom, white, $mediumGreen);
+    background: linear-gradient(to bottom, white, $lightGreen);
     transition: transform 0.9s ease;
 }
 
@@ -59,19 +59,25 @@ section {
     padding: 24px 32px 0 32px;
 }
 
+.mobileLinksContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
 .burgerMenuAnimation {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
     height: 30px;
     width: 30px;
-
-    >img {
-        width: 30px !important;
-        transition: transform 0.3s ease;
-    }
+    overflow: hidden;
 
     .strokeTop {
         transform-origin: top left;
@@ -85,21 +91,74 @@ section {
         transform-origin: bottom left;
     }
 
-    &.crossed {
-        .strokeTop {
-            transform: rotate(45deg);
-        }
-
-        .strokeMiddle {
-            opacity: 0;
-        }
-
-        .strokeBottom {
-            transform: rotate(-45deg);
-        }
+    &:hover{
+        cursor: pointer;
     }
 }
 
+.stroke {
+    background-color: $mediumGreen;
+    width: 45px;
+    height: 2px;
+}
+
+.crossed {
+    .strokeTop {
+        animation: animationStrokeTop 0.8s ease forwards;
+    }
+
+    .strokeMiddle {
+        opacity: 0 !important;
+    }
+
+    .strokeBottom {
+        animation: animationStrokeBottom 0.8s ease forwards;
+    }
+}
+
+@keyframes animationStrokeTop {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(43deg);
+    }
+}
+
+@keyframes animationStrokeBottom {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(-43deg);
+    }
+}
 
 // media querry --------------------------------
 @media(max-width: 1050px) {
