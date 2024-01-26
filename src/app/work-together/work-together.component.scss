@@ -1,4 +1,6 @@
-@import '../shared/shared.scss';
+@import '../../styles.scss';
+
+$fill-color: blue;
 
 section {
     display: flex;
@@ -25,23 +27,21 @@ section {
     padding: 0 10vw 0 32px;
 }
 
-button{
+a{
     background-color: transparent;
-    height: 58px;
     border: 2px solid $mediumGreen;
     border-radius: 10px;
-    padding: 15px 30px;
+    padding: 20px 30px;
     text-align: center;
     color: $mediumGreen;
     font-family: $montserrat;
     font-size: 24px;
     margin-bottom: 160px;
-    transition: background 0.3s ease;
+    text-decoration: none;
 
     &:hover{
         cursor: pointer;
-        background: linear-gradient(to bottom right, $mediumGreen, $mediumGreen);
-        color: white;
+        animation: fillAnimation 0.4s ease forwards;
     }
 }
 

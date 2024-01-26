@@ -1,4 +1,4 @@
-@import '../shared/shared.scss';
+@import '../../styles.scss';
 
 *{
     font-family: $montserrat;
@@ -38,7 +38,6 @@ header{
 .leftContainer{
     display: flex;
     align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
     padding-left: 32px;
     width: 50vw;
@@ -48,7 +47,7 @@ header{
 section{
     display: flex;
     background: linear-gradient(to bottom, white, $lightGreen);
-    padding-bottom: 32px;
+    padding-bottom: 120px !important;
     padding: 0 10vw;
 }
 

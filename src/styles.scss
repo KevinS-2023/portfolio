@@ -1,9 +1,69 @@
+*{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     overflow-x: hidden;
 }
 
-
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; $montserrat: 'Montserrat', sans-serif; }
+
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/montserrat/montserrat-v26-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* baloo-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Baloo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/baloo/baloo-2-v21-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  $baloo: 'Baloo', sans-serif;
+  
+  $montserrat: 'Montserrat', sans-serif;
+  
+  $mediumGreen: #57E8A2;
+  
+  $darkGreen: #33B476;
+  
+  $lightGreen: #D7FFEC;
+  
+  @keyframes fillAnimation {
+    0% {
+      color: $mediumGreen;
+      background: linear-gradient(to bottom right, transparent, transparent);
+    }
+  
+    25% {
+      color: #7ff0b9;
+      background: linear-gradient(to bottom right, white, #e1ffec);
+    }
+  
+    50% {
+      color: $lightGreen;
+      background: linear-gradient(to bottom right, #e1ffec, $lightGreen);
+    }
+  
+    75% {
+      color: #e1ffec;
+      background: linear-gradient(to bottom right, $lightGreen, #7ff0b9);
+    }
+  
+    100% {
+      color: white;
+      background: linear-gradient(to bottom right, $lightGreen, $mediumGreen);
+    }
+  
+  }

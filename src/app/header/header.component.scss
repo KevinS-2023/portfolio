@@ -1,4 +1,4 @@
-@import '../shared/shared.scss';
+@import '../../styles.scss';
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -100,6 +100,8 @@ section {
     }
 }
 
+
+// media querry --------------------------------
 @media(max-width: 1050px) {
     section {
         padding: 24px 32px 0 32px;
@@ -124,8 +126,4 @@ section {
     }
 }
 
-@media(max-width: 600px) {
-
-    
-
-}
+@media(max-width: 600px) {}

@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-landing-page',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  templateUrl: './landing-page.component.html',
+  styleUrl: './landing-page.component.scss'
 })
-export class HeroComponent {
+export class LandingpageComponent {
 
   links: string [] = [];
 
