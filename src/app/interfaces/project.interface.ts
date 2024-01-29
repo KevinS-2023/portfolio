@@ -4,6 +4,6 @@ export interface Project {
     skills:string[];
     description: string;
     gitHubLink: string;
-    htmlLink: string;
+    projectLink: string;
     reverse: string;
 }

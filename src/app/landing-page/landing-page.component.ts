@@ -10,11 +10,11 @@ import { Component } from '@angular/core';
 })
 export class LandingpageComponent {
 
-  links: string [] = [];
+  paths: string [] = [];
 
   constructor(){
     for(let i = 1; i < 4; i++){
-      this.links.push('../../assets/img/links/link_' + i + '.png');
+      this.paths.push('../../assets/img/links/link_' + i + '.png');
     }
   }
 

@@ -19,14 +19,46 @@ section{
     >div{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         width: calc((5 * 86px) + (4 * 47px));
-        
-        height: 340px;
+        height: auto;
         gap: 47px;
 
         >img{
             width: 86px;
             height: 150px;
+        }
+    }
+}
+
+@media(max-width: 700px){
+    section{
+        height: auto;
+        >div{
+            width: calc((3 * 86px) + (2 * 47px));
+        }
+    }
+}
+
+@media(max-width: 450px){
+    section{
+    
+        >h3{
+            font-size: 56px;
+        }
+    
+        >div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: calc((3 * 70px) + (2 * 40px));
+            height: auto;
+            gap: 40px;
+    
+            >img{
+                width: 70px;
+                height: 120px;
+            }
         }
     }
 }

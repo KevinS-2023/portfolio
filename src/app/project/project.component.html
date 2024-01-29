@@ -1,7 +1,7 @@
 <section class="{{childData.reverse}}" [ngClass]="{'flexStart': childData.reverse === 'normal', 'flexEnd': childData.reverse === 'reverse'}">
 
     <div class="leftContainer">
-        <a href="{{childData.htmlLink}}">
+        <a href="{{childData.projectLink}}">
             <img src="{{childData.path}}" alt="{{childData.title}}">
         </a>
     </div>
@@ -19,7 +19,11 @@
 
         <p>{{childData.description}}</p>
 
-        <a class="githubButton" href="{{childData.gitHubLink}}">Github</a>
+        <div class="buttonContainer">
+            <a  href="{{childData.gitHubLink}}">Github</a>
+            <a  href="{{childData.projectLink}}">Project</a>
+        </div>
+        
     </div>
 
 </section>

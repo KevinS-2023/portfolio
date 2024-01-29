@@ -2,10 +2,61 @@
 
 section {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 120px);
     background: linear-gradient(to bottom, white, $lightGreen);
     display: flex;
-    margin-top: 120px;
+    padding-top: 120px;
+
+    >div {
+        height: calc(100vh - 120px);
+        width: 50vw;
+        z-index: 1;
+    }
+}
+
+.leftContainer {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10vh;
+
+    >img {
+        height: 80vh;
+    }
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 10vw;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .linkContainer {
+        gap: 24px;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-family: $baloo;
+    font-weight: 800;
+    font-size: 128px;
+    line-height: 132px;
+    color: $mediumGreen;
+}
+
+h2 {
+    margin: 0;
+    font-family: $montserrat;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 68px;
+    color: $mediumGreen;
 }
 
 .bigCircle {
@@ -19,161 +70,95 @@ section {
     background: linear-gradient(to bottom right, $mediumGreen, $darkGreen);
 }
 
-.rightContainer{
-    width: 50vw;
-    margin-left: 50vw;
-    padding-right: 10vw;
-}
-
-.rightContainerTop{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-
-.rightContainerBottom{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    >div{
-        width: auto;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 25px;
-    }
-}
-
-.scrollContainer{
-    margin-left: calc(32px + 103px);
-
-    >div{
-        height: 40vh;
-        width: 2px;
-        background-color: $mediumGreen;
-    }
-
-    >span{
-        font-family: $montserrat;
-        font-weight: 500;
-        font-size: 24px;
-        color: $mediumGreen;
-    }
-}
-
-h1 {
-    margin: 0;
-    font-family: $baloo;
-    font-weight: 800;
-    font-size: 128px;
-    line-height: 132px;
-    color: $mediumGreen;
-}
-
-h2 {   
-    margin: 0; 
-    font-family: $montserrat;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 68px;
-    color: $mediumGreen;
-}
-
-.smalCircle{
+.smalCircle {
     width: 206px;
     height: 206px;
     position: absolute;
-    top: calc(100vh + 17px);
+    top: calc(100vh - 103px);
     left: calc(50vw - 103px);
+    z-index: 2;
 }
 
-.portrait{
-    height: calc(80vh + 120px);
-    position: absolute;
-    top: 20vh;
-    left: 32px;
-}
-
-@media(max-width: 1400px){
-    h1{
+@media(max-width: 1400px) {
+    h1 {
         font-size: 96px;
         line-height: 100px;
     }
 
-    h2{
+    h2 {
         font-size: 48px;
         line-height: 52px;
     }
 }
 
-@media(max-width: 1150px){
-    h1{
+@media(max-width: 1150px) {
+    h1 {
         font-size: 72px;
         line-height: 76px;
     }
 
-    h2{
+    h2 {
         font-size: 36px;
         line-height: 40px;
     }
 }
 
-@media(max-width: 1050px){
-    .rightContainer{
+@media(max-width: 1050px) {
+    .leftContainer {
+        padding-left: 32px;
+
+        >img {
+            height: 60vh;
+        }
+    }
+
+    .rightContainer {
         padding-right: 32px;
     }
-    
+
 }
 
-@media(max-width: 650px){
-    h1{
+@media(max-width: 750px) {
+    h1 {
         font-size: 56px;
         line-height: 60px;
     }
 
-    h2{
+    h2 {
         font-size: 32px;
         line-height: 36px;
     }
+
 }
 
 
 // mobile devices
-@media(max-width: 550px){
-    section{
+@media(max-width: 550px) {
+    section {
         flex-direction: column-reverse;
+        height: 100vh;
+
+        >div {
+            height: 50vh;
+            width: 100vw;
+            z-index: 1;
+        }
     }
 
-    .rightContainer{
-        margin: 0;
-        width: 100%;
+    .rightContainer {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 32px;
     }
 
-    .rightContainerTop{
-        align-items: center;
-        height: 50vh;
-    }
-
-    .rightContainerBottom{
-        height: 50vh;
-    }
-
-    h1{
+    h1 {
         font-size: 72px;
         line-height: 76px;
         color: white !important;
         z-index: 1;
     }
 
-    h2{
+    h2 {
         font-size: 36px;
         line-height: 40px;
         color: white !important;
@@ -183,23 +168,38 @@ h2 {
     .bigCircle {
         width: 150vw !important;
         height: 150vw !important;
-        top: -5vw !important;
-        left: -50vw !important;
+        top: -5vh !important;
+        left: -55vw !important;
         z-index: 0 !important;
     }
 
-    .portrait{
-        height: 50vh;
-        position: absolute;
-        top: 50vh;
-        left: 32px;
+    .smalCircle {
+        top: calc(100vh + 17px);
+        left: calc(50vw - 103px);
+        z-index: 2;
     }
 
-    .scrollContainer{
+    .linkContainer {
         display: none !important;
     }
+}
 
-    .linkContainer{
-        display: none !important;
+@media(max-width: 450px){
+    .leftContainer {
+        padding: 0 16px;
+    }
+    
+    .rightContainer {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 56px;
+        line-height: 60px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 36px;
     }
 }

@@ -10,9 +10,14 @@ section {
     justify-content: space-between;
     padding: 24px 10vw 0 10vw;
 
-    >img {
-        width: 40px;
-        height: 40px;
+    .logo {
+        width: 64px;
+        height: 69px;
+    }
+
+    .burgerMenuImg{
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -34,8 +39,8 @@ a {
 
 .burgerMenuImg {
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 
     &:hover {
         cursor: pointer;
@@ -185,4 +190,9 @@ a {
     }
 }
 
-@media(max-width: 600px) {}
+@media(max-width: 450px) {
+
+    section {
+        padding: 16px 16px 0 16px;
+    }
+}

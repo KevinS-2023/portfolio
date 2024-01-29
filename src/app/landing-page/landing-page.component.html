@@ -1,35 +1,28 @@
 <section>
-    
-    <!-- big circle -->
-    <div class="bigCircle"></div>
-    
-    <div class="rightContainer">
 
-        <div class="rightContainerTop">
+    <div class="leftContainer">
+        <!-- portrait -->
+        <img class="portrait" src="../../assets/img/hero/portrait.png" alt="">
+
+    </div>
+
+    <div class="rightContainer">
+        <div class="mainText">
             <h2>Hello! I am Kevin</h2>
             <h1>Frontend</h1>
             <h1>Developer</h1>
         </div>
 
-        <div class="rightContainerBottom">
-
-            <div class="scrollContainer">
-                <span>Scroll</span>
-                <div></div>
-            </div>
-
-            <div class="linkContainer">
-                <img *ngFor="let path of links, let index" [src]="path" alt="">
-            </div>
-
-            <!-- portrait -->
-            <img class="portrait" src="../../assets/img/hero/portrait.png" alt="">
-
+        <div class="linkContainer">
+            <a href="" *ngFor="let path of paths, let index"><img [src]="path" alt=""></a>
         </div>
 
     </div>
 
 </section>
+
+<!-- big circle -->
+<div class="bigCircle"></div>
 
 <!-- smal circle -->
 <img class="smalCircle" src="../../assets/img/circel_big.png" alt="circel_big">
