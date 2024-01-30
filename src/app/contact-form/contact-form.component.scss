@@ -113,3 +113,9 @@ input:-moz-autofill {
 input:-ms-autofill {
     background-color: transparent !important;
 }
+
+@media(max-width: 550px){
+    .formControlContainer {
+        width: calc(100% - 50px);
+    }
+}
