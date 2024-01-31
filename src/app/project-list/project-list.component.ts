@@ -32,16 +32,6 @@ export class ProjectListComponent {
    reverse: 'reverse',
  };
 
- projectCrm: Project = {
-  path: '../../assets/img/projects/project_crm.png',
- title: 'Simpel CRM',
- skills: ['HTML', 'CSS', 'JavaScript'],
- description: 'An uncomplicated Customer Relationship Management system that operates with CRUD functionality.',
- gitHubLink: 'gitHub-Link',
- projectLink: '',
- reverse: 'normal',
-};
-
 projectPokedex: Project = {
   path: '../../assets/img/projects/project_pokedex.png',
  title: 'Pokedex',
@@ -49,17 +39,17 @@ projectPokedex: Project = {
  description: 'Built upon the PokéAPI, this simple library serves to provide and catalog Pokémon information.',
  gitHubLink: 'gitHub-Link',
  projectLink: '',
- reverse: 'reverse',
+ reverse: 'normal',
 };
 
-projectCryptoConverter: Project = {
-  path: '../../assets/img/projects/project_crypto_converter.png',
- title: 'Crypto converter',
- skills: ['Angular', 'TypeScript', 'RestAPI', 'HTML', 'CSS'],
- description: 'Simple currency converter based on a public API displaying exchange rate charts.',
+projectPortfolio: Project = {
+  path: '../../assets/img/projects/project_pokedex.png',
+ title: 'Portfolio',
+ skills: ['HTML', 'CSS', 'TypeScript', 'Angular'],
+ description: 'Built upon the PokéAPI, this simple library serves to provide and catalog Pokémon information.',
  gitHubLink: 'gitHub-Link',
  projectLink: '',
- reverse: 'normal',
+ reverse: 'reverse',
 };
 
 }

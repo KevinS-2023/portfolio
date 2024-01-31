@@ -7,3 +7,9 @@ export interface Project {
     projectLink: string;
     reverse: string;
 }
+
+export interface Links {
+    imgPath: string;
+    link: string;
+}
+

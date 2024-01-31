@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Links } from '../interfaces/project.interface';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,12 +11,14 @@ import { Component } from '@angular/core';
 })
 export class LandingpageComponent {
 
-  paths: string [] = [];
+  readonly links: Links[] = [
+    { imgPath: '../../assets/img/links/github_green.png', link: 'https://github.com/KevinS-2023' },
+    { imgPath: '../../assets/img/links/email_green.png', link: 'mailto:kevin.schmidt.1990@web.de' },
+    { imgPath: '../../assets/img/links/linkedin_green.png', link: 'https://www.linkedin.com/in/kevin-schmidt-a571172aa/' }
+];
 
   constructor(){
-    for(let i = 1; i < 4; i++){
-      this.paths.push('../../assets/img/links/link_' + i + '.png');
-    }
+    
   }
 
 }

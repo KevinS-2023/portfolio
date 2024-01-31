@@ -38,6 +38,14 @@ section {
 
     .linkContainer {
         gap: 24px;
+
+        >a{
+            >img{
+                width: 48px;
+                height: 48px;
+            }
+        }
+      
     }
 }
 

@@ -14,7 +14,7 @@
         </div>
 
         <div class="linkContainer">
-            <a href="" *ngFor="let path of paths, let index"><img [src]="path" alt=""></a>
+            <a href="{{link.link}}" target="_blank" *ngFor="let link of links, let index"><img [src]="link.imgPath" alt=""></a>
         </div>
 
     </div>
