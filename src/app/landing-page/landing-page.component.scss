@@ -20,6 +20,7 @@ section {
 
     >img {
         height: 80vh;
+        filter: saturate(150%);
     }
 }
 
@@ -68,13 +69,11 @@ h2 {
 
 .bigCircle {
     position: absolute;
-    width: 100vw;
-    height: 100vw;
-    border-radius: 100%;
-    top: -55vw;
-    left: -50vw;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
     z-index: 0;
-    background: linear-gradient(to bottom right, $mediumGreen, $darkGreen);
 }
 
 .smalCircle {
@@ -96,6 +95,10 @@ h2 {
         font-size: 48px;
         line-height: 52px;
     }
+
+    .bigCircle {
+        height: 75vh;
+    }
 }
 
 @media(max-width: 1150px) {
@@ -115,12 +118,16 @@ h2 {
         padding-left: 32px;
 
         >img {
-            height: 60vh;
+            height: 70vh;
         }
     }
 
     .rightContainer {
         padding-right: 32px;
+    }
+
+    .bigCircle {
+        height: 50vh;
     }
 
 }
@@ -172,14 +179,6 @@ h2 {
         z-index: 1;
     }
 
-    .bigCircle {
-        width: 150vw !important;
-        height: 150vw !important;
-        top: -5vh !important;
-        left: -55vw !important;
-        z-index: 0 !important;
-    }
-
     .smalCircle {
         top: calc(100vh + 17px);
         left: calc(50vw - 103px);
@@ -188,6 +187,24 @@ h2 {
 
     .linkContainer {
         display: none !important;
+    }
+
+    .bigCircle {
+        display: none;
+    }
+
+    .bigCircleMobile{
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        width: 150vw;
+        height: 100vh;
+        border-radius: 100%;
+        background: linear-gradient(to bottom right, $darkGreen, $mediumGreen);
+    }
+
+    .mainText{
+        margin-top: 100px;
     }
 }
 

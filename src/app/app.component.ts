@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -9,25 +9,35 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 
-
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
-    HeaderComponent, 
-    LandingpageComponent, 
-    WorkTogetherComponent, 
-    SkillsComponent, 
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    LandingpageComponent,
+    WorkTogetherComponent,
+    SkillsComponent,
     ProjectListComponent,
-    ContactComponent, 
+    ContactComponent,
     FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'portfolio';
+  
+  isMenuOpen: boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    if (this.isMenuOpen) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  switchMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
