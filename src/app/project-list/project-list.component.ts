@@ -43,10 +43,10 @@ projectPokedex: Project = {
 };
 
 projectPortfolio: Project = {
-  path: '../../assets/img/projects/project_pokedex.png',
+  path: '../../assets/img/projects/project_portfolio.png',
  title: 'Portfolio',
  skills: ['HTML', 'CSS', 'TypeScript', 'Angular'],
- description: 'Built upon the PokéAPI, this simple library serves to provide and catalog Pokémon information.',
+ description: 'This website was developed to showcase my skills, experiences, and projects as a web developer. With the help of the Angular framework, I have created a user-friendly and visually appealing website that allows visitors to learn more about me and my work.',
  gitHubLink: 'gitHub-Link',
  projectLink: '',
  reverse: 'reverse',

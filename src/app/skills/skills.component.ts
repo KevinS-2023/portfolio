@@ -10,11 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class SkillsComponent {
 
-  skills: string [] = [];
+  skillsImg: string [] = [];
+  skillsName: string[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Scrum', 'Firebase', 'GIT', 'CSS', 'Rest-API', 'Material design'];
 
   constructor(){
     for(let i = 1; i < 11; i++){
-     this.skills.push('../../assets/img/skills/skill_' + i + '.png');
+     this.skillsImg.push('../../assets/img/skills/skill_' + i + '.svg');
     }
   }
 

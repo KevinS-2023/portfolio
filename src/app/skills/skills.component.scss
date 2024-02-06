@@ -1,6 +1,12 @@
 @import '../../styles.scss';
 
-section{
+* {
+    font-family: $baloo !important;
+    font-weight: 400 !important;
+    color: #ffffff;
+}
+
+section {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,53 +15,84 @@ section{
     width: 100%;
     padding: 200px 0;
 
-    >h3{
-        font-family: $baloo;
-        font-weight: 400;
+    >h3 {
         font-size: 96px;
-        color: #ffffff;
+        line-height: 100px;
+        margin-bottom: 32px;
     }
 
-    >div{
+    >div {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: calc((5 * 86px) + (4 * 47px));
+        width: calc((5 * 130px) + (4 * 47px));
         height: auto;
         gap: 47px;
 
-        >img{
-            width: 86px;
-            height: 150px;
+        >div {
+            text-align: center;
+            width: 130px;
+
+            >img {
+                width: 86px;
+                height: 150px;
+                filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+            }
+            
         }
+
+        
     }
 }
 
-@media(max-width: 700px){
-    section{
+h4 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+@media(max-width: 880px) {
+    section {
         height: auto;
-        >div{
-            width: calc((3 * 86px) + (2 * 47px));
+
+        >div {
+            width: calc((3 * 96px) + (2 * 47px));
+
+            >div {
+                text-align: center;
+                width: 96px;
+                
+            }
         }
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
     }
 }
 
-@media(max-width: 450px){
-    section{
-    
-        >h3{
+@media(max-width: 450px) {
+    section {
+
+        >h3 {
             font-size: 56px;
+            line-height: 60px;
         }
-    
-        >div{
+
+        h4 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        >div {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             width: calc((3 * 70px) + (2 * 40px));
             height: auto;
             gap: 40px;
-    
-            >img{
+
+            >img {
                 width: 70px;
                 height: 120px;
             }

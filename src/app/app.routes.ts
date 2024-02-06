@@ -1,4 +1,11 @@
-import { Routes } from '@angular/router';
-import { WorkTogetherComponent } from './work-together/work-together.component';
+import { Routes, RouterOutlet } from '@angular/router';
+import { ImprintComponent } from './imprint/imprint.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { MainComponent } from './main/main.component';
 
-export const routes: Routes = [];
+
+export const routes: Routes = [
+    {path: '', component: MainComponent},
+    {path: 'imprint', component: ImprintComponent},
+    {path: 'privacypolicy', component: PrivacyPolicyComponent},
+];

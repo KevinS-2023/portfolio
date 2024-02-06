@@ -9,6 +9,8 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 24px 10vw 0 10vw;
+    position: relative;
+    z-index: 1;
 
     .logo {
         width: 64px;
@@ -121,6 +123,11 @@ a {
     }
 }
 
+.hasBackColor{
+    background: linear-gradient(to right, $mediumGreen, white);
+    padding-bottom: 24px;
+}
+
 @keyframes animationStrokeTop {
     0% {
         transform: rotate(0deg);
@@ -193,6 +200,6 @@ a {
 @media(max-width: 450px) {
 
     section {
-        padding: 16px 16px 0 16px;
+        padding: 24px 16px;
     }
 }

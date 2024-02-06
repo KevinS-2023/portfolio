@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+section {
+    padding: 120px 10vw;
+}
+
+@media(max-width: 550px) {
+    section {
+        padding: 120px 32px !important;
+    }
+}
+
+@media(max-width: 450px) {
+    section {
+        padding: 120px 16px !important;
+    }
+}

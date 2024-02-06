@@ -15,7 +15,16 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, LandingpageComponent, WorkTogetherComponent, SkillsComponent, ProjectListComponent,ContactComponent, FooterComponent],
+  imports: [
+    CommonModule, 
+    RouterOutlet, 
+    HeaderComponent, 
+    LandingpageComponent, 
+    WorkTogetherComponent, 
+    SkillsComponent, 
+    ProjectListComponent,
+    ContactComponent, 
+    FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

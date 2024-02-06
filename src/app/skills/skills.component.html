@@ -1,8 +1,12 @@
 <section>
     <h3>Skill set</h3>
-
-    <div>
-        <img *ngFor="let path of skills"  [src]="path" alt="">
-    </div>
     
+    <div>
+        <div *ngFor="let path of skillsImg; let i = index">
+            <img [src]="path" alt="">
+            <h4>{{skillsName[i]}}</h4>
+        </div>
+    </div>
+
+
 </section>

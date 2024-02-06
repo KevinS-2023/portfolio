@@ -2,13 +2,12 @@
 
 section {
     width: 100%;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 90px);
     background: linear-gradient(to bottom, white, $lightGreen);
     display: flex;
-    padding-top: 120px;
 
     >div {
-        height: calc(100vh - 120px);
+        height: calc(100vh - 90px);
         width: 50vw;
         z-index: 1;
     }
@@ -72,7 +71,7 @@ h2 {
     width: 100vw;
     height: 100vw;
     border-radius: 100%;
-    top: -50vw;
+    top: -55vw;
     left: -50vw;
     z-index: 0;
     background: linear-gradient(to bottom right, $mediumGreen, $darkGreen);
@@ -141,7 +140,7 @@ h2 {
 
 
 // mobile devices
-@media(max-width: 550px) {
+@media(max-width: 620px) {
     section {
         flex-direction: column-reverse;
         height: 100vh;

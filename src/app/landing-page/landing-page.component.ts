@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Links } from '../interfaces/project.interface';
+import { WorkTogetherComponent } from '../work-together/work-together.component';
+import { SkillsComponent } from '../skills/skills.component';
+import { ProjectListComponent } from '../project-list/project-list.component';
+import { ContactComponent } from '../contact/contact.component';
+
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, WorkTogetherComponent, SkillsComponent, ProjectListComponent, ContactComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
