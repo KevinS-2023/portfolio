@@ -13,7 +13,7 @@ form {
     font-family: $montserrat;
     font-size: 16px;
     padding: 0px 25px;
-    margin: 1px;
+    margin: 0.8px;
     background-color: white;
 
     >p {
@@ -25,7 +25,7 @@ form {
 
     &:hover {
         margin: 0;
-        border: 3px solid $mediumGreen;
+        border: 2px solid $mediumGreen;
     }
 
     &:focus-within {

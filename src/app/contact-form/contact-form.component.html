@@ -1,21 +1,21 @@
-<form (submit)="sendMail()" ngNativeValidate>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate>
     <div class="formControlContainer">
         <p>Your name</p>
-        <input required title="Please insert your name" type="text" name="name" id="" placeholder="Your name" class="inputField">
+        <input required title="Please insert your name" type="text" name="name" [(ngModel)]="contactData.name" id="" placeholder="Your name" class="inputField">
     </div>
 
     <div class="formControlContainer">
         <p>Your mail</p>
-        <input required title="Please insert your email adress" type="email" name="email" id="" class="inputField" placeholder="Your email">
+        <input required title="Please insert your email adress" type="email" name="mail" [(ngModel)]="contactData.mail" id="" class="inputField" placeholder="Your email">
     </div>
 
     <div class="formControlContainer">
         <p>Your Message</p>
-        <textarea required name="" id="" cols="30" rows="10" placeholder="Your message" name="message"></textarea>
+        <textarea required name="" id="" cols="30" rows="10" placeholder="Your message" name="message" [(ngModel)]="contactData.message"></textarea>
     </div>
 
     <div>
-        <input type="checkbox" required class="checkBoxField" name="checkbox">
+        <input type="checkbox" required class="checkBoxField" name="checkbox" #checkboxInput="ngModel" [(ngModel)]="checkbox">
         <p>I've read the </p>
         <a href="privacypolicy">privacy policy</a>
         <p>and agree to the processing of my data as outlined.</p>
@@ -27,3 +27,5 @@
     
 
 </form>
+
+  

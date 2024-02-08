@@ -1,14 +1,13 @@
-*{
-    scroll-behavior: smooth;
+html, body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
 }
 
 body{
-    margin: 0;
-    overflow-x: hidden;
+  margin: 0 auto; 
+  $montserrat: 'Montserrat', sans-serif;
+  max-width: 1920px;
 }
-
-html, body { height: 100%; }
-body { margin: 0; $montserrat: 'Montserrat', sans-serif; }
 
 /* montserrat-regular - latin */
 @font-face {
@@ -34,12 +33,15 @@ body { margin: 0; $montserrat: 'Montserrat', sans-serif; }
   
   $montserrat: 'Montserrat', sans-serif;
   
+
+  // colors
   $mediumGreen: #57E8A2;
   
   $darkGreen: #33B476;
   
   $lightGreen: #D7FFEC;
-  
+
+  // button animation
   @keyframes fillAnimation {
     0% {
       color: $mediumGreen;

@@ -8,9 +8,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 10vw 0 10vw;
-    position: relative;
+    padding: 0 10vw;
+    position: fixed;
+    top: 0;
     z-index: 2;
+    height: 120px;
+    width: calc(100% - 20vw);
+    background: linear-gradient(to right, $mediumGreen, white 70%);
 
     .logo {
         width: 64px;
@@ -194,6 +198,7 @@ a {
 
     .burgerMenuImg {
         display: flex;
+        filter: brightness(50%);
     }
 }
 
