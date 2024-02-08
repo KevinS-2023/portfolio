@@ -5,12 +5,13 @@ import { WorkTogetherComponent } from '../work-together/work-together.component'
 import { SkillsComponent } from '../skills/skills.component';
 import { ProjectListComponent } from '../project-list/project-list.component';
 import { ContactComponent } from '../contact/contact.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, WorkTogetherComponent, SkillsComponent, ProjectListComponent, ContactComponent],
+  imports: [CommonModule, WorkTogetherComponent, SkillsComponent, ProjectListComponent, ContactComponent, TranslateModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })

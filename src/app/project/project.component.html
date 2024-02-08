@@ -15,11 +15,11 @@
 
         </div>
 
-        <p>{{childData.description}}</p>
+        <p>{{ 'project_' + (index + 1) | translate }}</p>
 
         <div class="buttonContainer">
             <a  href="{{childData.gitHubLink}}" target="_blank">Github</a>
-            <a  href="{{childData.projectLink}}" target="_blank">Project</a>
+            <a  href="{{childData.projectLink}}" target="_blank">{{'projectButton' | translate}}</a>
         </div>
         
     </div>

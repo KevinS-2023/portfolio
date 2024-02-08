@@ -1,13 +1,12 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { LandingpageComponent } from './landing-page/landing-page.component';
-import { WorkTogetherComponent } from './work-together/work-together.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjectListComponent } from './project-list/project-list.component';
-import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppModule } from './app.module';
+import { TranslateService } from '@ngx-translate/core';
+
+
 
 @Component({
   selector: 'app-root',
@@ -16,12 +15,9 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    LandingpageComponent,
-    WorkTogetherComponent,
-    SkillsComponent,
-    ProjectListComponent,
-    ContactComponent,
-    FooterComponent],
+    FooterComponent,
+    AppModule,
+    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -29,6 +25,19 @@ export class AppComponent {
   title = 'Kevin Schmidt';
   
   isMenuOpen: boolean = false;
+
+  constructor(public translate: TranslateService){
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang('en');
+
+    const browserLang: string | undefined = translate.getBrowserLang();
+if (browserLang !== undefined) {
+    translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+} else {
+    // Behandle den Fall, wenn die Browser-Sprache nicht erkannt wird
+    translate.use('en'); // Setze die Standardsprache auf Englisch
+}
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {

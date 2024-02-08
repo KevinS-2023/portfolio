@@ -1,28 +1,28 @@
 <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate>
     <div class="formControlContainer">
-        <p>Your name</p>
-        <input required title="Please insert your name" type="text" name="name" [(ngModel)]="contactData.name" id="" placeholder="Your name" class="inputField">
+        <p>{{'name' | translate}}</p>
+        <input required title="Please insert your name" type="text" name="name" [(ngModel)]="contactData.name" id="" placeholder="{{'name' | translate}}" class="inputField">
     </div>
 
     <div class="formControlContainer">
-        <p>Your mail</p>
-        <input required title="Please insert your email adress" type="email" name="mail" [(ngModel)]="contactData.mail" id="" class="inputField" placeholder="Your email">
+        <p>{{'mail' | translate}}</p>
+        <input required title="Please insert your email adress" type="email" name="mail" [(ngModel)]="contactData.mail" id="" class="inputField" placeholder="{{'mail' | translate}}">
     </div>
 
     <div class="formControlContainer">
-        <p>Your Message</p>
-        <textarea required name="" id="" cols="30" rows="10" placeholder="Your message" name="message" [(ngModel)]="contactData.message"></textarea>
+        <p>{{'message' | translate}}</p>
+        <textarea required name="" id="" cols="30" rows="10" placeholder="{{'message' | translate}}" name="message" [(ngModel)]="contactData.message"></textarea>
     </div>
 
     <div>
         <input type="checkbox" required class="checkBoxField" name="checkbox" #checkboxInput="ngModel" [(ngModel)]="checkbox">
-        <p>I've read the </p>
-        <a href="privacypolicy">privacy policy</a>
-        <p>and agree to the processing of my data as outlined.</p>
+        <p>{{'privacyPolicy_1' | translate}}</p>
+        <a href="privacypolicy">{{'privacyPolicy_2' | translate}}</a>
+        <p>{{'privacyPolicy_3' | translate}}</p>
     </div>
     
     <div class="buttonContainer">
-        <button>Send message</button>
+        <button>{{'sendMessage' | translate}}</button>
     </div>
     
 

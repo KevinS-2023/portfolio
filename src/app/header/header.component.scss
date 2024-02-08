@@ -21,7 +21,7 @@ section {
         height: 69px;
     }
 
-    .burgerMenuImg{
+    .burgerMenuImg {
         width: 32px;
         height: 32px;
     }
@@ -70,7 +70,7 @@ a {
     padding: 24px 32px 0 32px;
 }
 
-.mobileLinksContainer{
+.mobileLinksContainer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -102,7 +102,7 @@ a {
         transform-origin: bottom left;
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 }
@@ -126,6 +126,29 @@ a {
         animation: animationStrokeBottom 0.8s ease forwards;
     }
 }
+
+select {
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid $mediumGreen;
+    border-radius: 5px;
+    background-color: #fff;
+    color: $darkGreen;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $darkGreen;
+    }
+}
+
+
+
+
 
 
 @keyframes animationStrokeTop {
@@ -175,7 +198,8 @@ a {
 // media querry --------------------------------
 @media(max-width: 1050px) {
     section {
-        padding: 24px 32px 0 32px;
+        padding: 0px 32px;
+        width: calc(100% - 64px);
     }
 
     .linkContainer {
@@ -199,8 +223,8 @@ a {
 }
 
 @media(max-width: 450px) {
-
     section {
-        padding: 24px 16px;
+        padding: 0px 16px;
+        width: calc(100% - 32px);
     }
 }
