@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Injector } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from '../app.component';
@@ -12,12 +12,14 @@ import { AppComponent } from '../app.component';
 })
 export class HeaderComponent {
 
-  @Input() backColor: boolean = false;
-
   animate: boolean = false;
   containerPosition: string = 'translateX(0)';
   containerVisible: boolean = false;
-  constructor(private appComponent: AppComponent) {}
+  private appComponent: AppComponent;
+  
+  constructor(private injector: Injector) {
+    this.appComponent = this.injector.get(AppComponent);
+  }
 
   switchMenu(){
     this.containerPosition = this.containerPosition === 'translateX(-100vw)' ? 'translateX(0)' : 'translateX(-100vw)';

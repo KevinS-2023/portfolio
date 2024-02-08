@@ -40,7 +40,10 @@ header {
     align-items: flex-start;
     flex-direction: column;
     padding-right: 32px;
-    width: 50vw;
+    width: 50%;
+    >p{
+        max-width: 600px;
+    }
 }
 
 section {

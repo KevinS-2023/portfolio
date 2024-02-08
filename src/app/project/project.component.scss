@@ -28,7 +28,9 @@ img {
 
 .rightContainer {
     align-items: flex-start !important;
-
+    >p{
+        max-width: 600px;
+    }
 }
 
 // skills ----------------------------------------
