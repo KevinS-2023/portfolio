@@ -18,7 +18,7 @@
     "project_4": "This website was developed to showcase my skills, experiences, and projects as a web developer. With the help of the Angular framework, I have created a user-friendly and visually appealing website that allows visitors to learn more about me and my work.",
     "projectButton": "Project",
     "name": "Your Name",
-    "mail": "Your EMail",
+    "mail": "Your E - Mail",
     "message": "Your Message",
     "privacyPolicy_1": "I've read the ",
     "privacyPolicy_2": "privacy policy",
@@ -28,6 +28,7 @@
     "contact_3": "Feel free to reach out to me using this form. I'm eager to connect, learn about your ideas, and contribute to your projects with my skills.",
     "contact_4": "Need a Frontend developer?",
     "contact_5": "Contact me!",
+    "mail_sent": "E-Mail sent",
     "imprint": "Imprint"
 
 }

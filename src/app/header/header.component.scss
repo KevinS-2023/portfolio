@@ -13,7 +13,8 @@ section {
     top: 0;
     z-index: 2;
     height: 120px;
-    width: calc(100% - 20vw);
+    width: calc(100vw - 20vw);
+    max-width: calc(1920px - 20vw);
     background: linear-gradient(to right, $mediumGreen, white 70%);
 
     .logo {
@@ -143,55 +144,6 @@ select {
     &:focus {
         outline: none;
         border-color: $darkGreen;
-    }
-}
-
-
-
-
-
-
-@keyframes animationStrokeTop {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(10deg);
-    }
-
-    50% {
-        transform: rotate(20deg);
-    }
-
-    75% {
-        transform: rotate(30deg);
-    }
-
-    100% {
-        transform: rotate(43deg);
-    }
-}
-
-@keyframes animationStrokeBottom {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-10deg);
-    }
-
-    50% {
-        transform: rotate(-20deg);
-    }
-
-    75% {
-        transform: rotate(-30deg);
-    }
-
-    100% {
-        transform: rotate(-43deg);
     }
 }
 

@@ -17,6 +17,7 @@ export class ContactFormComponent {
   mailTest = true;
   http = inject(HttpClient);
   checkbox: boolean = false;
+  startAnimation: boolean = false;
 
   contactData = {
     name: '',
@@ -46,7 +47,7 @@ export class ContactFormComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.feedback(),
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
 
@@ -54,6 +55,14 @@ export class ContactFormComponent {
       this.checkbox = false;
     }
   }
+
+  feedback() {
+    this.startAnimation = true;
+    setTimeout(() => {
+      this.startAnimation = false;
+    }, 3200)
+  }
+
 
 }
 

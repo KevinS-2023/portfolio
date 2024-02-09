@@ -75,9 +75,14 @@ p {
             height: auto;
         }
     }
+
+    h1 {
+        font-size: 96px;
+        line-height: 100px;
+    }
 }
 
-@media(max-width: 550px){
+@media(max-width: 570px){
     section {
         flex-direction: column;
         margin-top: 120px;
@@ -122,5 +127,10 @@ p {
     
     .rightContainer{
         padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 56px;
+        line-height: 60px;
     }
 }

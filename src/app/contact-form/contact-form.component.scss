@@ -99,6 +99,29 @@ textarea {
     }
 }
 
+.feedback{
+    position: relative;
+    left: calc(100% + 10vw);
+    top: -200px;
+    width: 450px;
+    height: 80px;
+    font-size: 36px;
+    font-family: $baloo;
+    color: white;
+    background: linear-gradient(to bottom right, $lightGreen, $darkGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 16px;
+}
+
+.feedback.animate{
+    animation: left_1920 3s ease forwards;
+}
+
+
+
 /* For Chrome, Safari und Opera */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px white inset;
@@ -114,8 +137,79 @@ input:-ms-autofill {
     background-color: transparent !important;
 }
 
+@media(max-width: 1050px) {
+    .feedback.animate{
+        animation: left_1050 3s ease forwards;
+    }
+
+    section {
+        padding: 0 32px;
+    }
+}
+
 @media(max-width: 550px){
     .formControlContainer {
         width: calc(100% - 50px);
     }
+
+    .feedback.animate{
+        animation: left_550 3s ease forwards;
+    }
+
+    .feedback{
+        top: -200px;
+        width: 80%;
+        height: 80px;
+        font-size: 36px;
+        left: calc(100% + 16px);
+        font-size: 24px;
+    }
 }
+
+//keyframes for max- width 1920px
+@keyframes left_1920 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100% - 10vw));
+    }
+    90%{
+        transform: translateX(calc(-100% - 10vw));
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+  //keyframes for max-width 1050px
+  @keyframes left_1050 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100% - 120px));
+    }
+    90%{
+        transform: translateX(calc(-100% - 120px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+    //keyframes for max-width 550px
+    @keyframes left_550 {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(calc(-120%));
+        }
+        90%{
+            transform: translateX(calc(-120%));
+        }
+        100% {
+            transform: translateX(0);
+        }
+      }

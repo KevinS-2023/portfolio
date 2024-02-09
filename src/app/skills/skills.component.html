@@ -3,7 +3,9 @@
     
     <div>
         <div *ngFor="let path of skillsImg; let i = index">
-            <img [src]="path" alt="">
+            <div class="skillContainer">
+                <img [src]="path" alt="" [ngClass]="{'animate': isVisible}" class="skillImg">
+            </div>
             <h4>{{skillsName[i]}}</h4>
         </div>
     </div>
