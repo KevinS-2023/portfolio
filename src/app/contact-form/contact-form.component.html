@@ -1,4 +1,5 @@
 <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate>
+    
     <div class="formControlContainer">
         <p>{{'name' | translate}}</p>
         <input required title="Please insert your name" type="text" name="name" [(ngModel)]="contactData.name" id="" placeholder="{{'name' | translate}}" class="inputField">
@@ -22,10 +23,8 @@
     </div>
     
     <div class="buttonContainer">
-        <button>{{'sendMessage' | translate}}</button>
+        <button type="submit">{{'sendMessage' | translate}}</button>
     </div>
-
-    <div class="feedback" [class.animate]="startAnimation">{{'mail_sent' | translate}}</div>
 
 </form>
 

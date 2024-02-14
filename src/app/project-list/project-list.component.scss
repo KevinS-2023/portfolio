@@ -1,7 +1,17 @@
 @import '../../styles.scss';
 
 section{
-    padding: 160px 10vw 100px 10vw;
+    width: 100vw;
+}
+
+.contentContainer{
+    padding: 0px 10vw;
+    max-width: 1920px;
+}
+
+.textContainer{
+    padding: 160px 0;
+    width: 100%;
 }
 
 h1{
@@ -17,9 +27,21 @@ p{
     line-height: 28px;
 }
 
+@media(max-width: 1050px){
+    .contentContainer{
+        padding: 0px 32px;
+    }
+}
+
 @media(max-width: 550px){
     h1{
         font-size: 70px;
         line-height: 74px;
+    }
+}
+
+@media(max-width: 450px){
+    .contentContainer{
+        padding: 0px 16px;
     }
 }

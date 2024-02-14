@@ -6,7 +6,13 @@ html, body {
 body{
   margin: 0 auto; 
   $montserrat: 'Montserrat', sans-serif;
-  max-width: 1920px;
+  width: 100vw;
+}
+
+.flexCenterCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* montserrat-regular - latin */

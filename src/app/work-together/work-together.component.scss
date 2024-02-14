@@ -4,7 +4,14 @@ $fill-color: blue;
 
 section {
     display: flex;
-    min-height: 50vh;
+    width: 100vw;
+    min-height: 50vh;  
+}
+
+.contentContainer{
+    display: flex;
+    max-width: 1920px;
+    padding: 0 10vw;
 
     >div {
         width: 50%;
@@ -16,7 +23,6 @@ section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 32px 0 10vw;
 }
 
 .rightContainer{
@@ -24,7 +30,6 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10vw 0 32px;
     >p{
         max-width: 600px;
     }
@@ -51,10 +56,10 @@ a{
 h1 {
     font-family: $baloo;
     font-weight: 400;
-    font-size: 121px;
+    font-size: 104px;
     color: $mediumGreen;
     margin: 0;
-    line-height: 130px;
+    line-height: 108px;
 }
 
 p {
@@ -67,13 +72,21 @@ p {
 
 @media(max-width: 1000px){
     section {
-        flex-direction: column;
         margin-top: 120px;
-    
-        >div {
-            width: calc(100% - 64px);
-            height: auto;
+    }
+
+    .contentContainer{
+        flex-direction: column;
+        width: calc(100% - 64px);
+        padding: 0 32px;
+
+        >div{
+            width: 100%;
         }
+    }
+
+    .leftContainer{
+        text-align: center;
     }
 
     h1 {
@@ -83,22 +96,9 @@ p {
 }
 
 @media(max-width: 570px){
-    section {
-        flex-direction: column;
-        margin-top: 120px;
-    
-        >div {
-            width: calc(100% - 64px);
-            height: auto;
-        }
-    }
-
-    .leftContainer {
-        padding: 0 32px;
-    }
-    
-    .rightContainer{
-        padding: 0 32px;
+    .contentContainer{
+        width: calc(100vw - 32px) !important;
+        padding: 0 16px;
     }
 
     h1 {
@@ -117,16 +117,8 @@ p {
 
     section {
         >div {
-            width: calc(100% - 32px);
+            width: calc(100% - 32px) !important;
         }
-    }
-
-    .leftContainer {
-        padding: 0 16px;
-    }
-    
-    .rightContainer{
-        padding: 0 16px;
     }
 
     h1 {

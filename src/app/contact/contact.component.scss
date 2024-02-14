@@ -9,53 +9,123 @@
 h1 {
     font-family: $baloo !important;
     font-size: 90px;
+    line-height: 94px;
+    margin: 0;
 }
 
 h2 {
     font-weight: 700;
     font-size: 32px;
+    line-height: 36px;
+    margin: 0;
 }
 
 h3 {
     font-weight: 700 !important;
     font-size: 16px;
+    line-height: 20px;
+    margin: 0;
 }
 
 h4 {
     font-size: 16px;
+    line-height: 20px;
+    margin: 0;
 }
 
 p {
     font-size: 16px;
+    line-height: 20px;
     color: black !important;
 }
 
-header {
+section{
+    background: linear-gradient(to bottom, white, $lightGreen);
+    width: 100vw; 
+}
+
+.container{
+    max-width: 1920px;
     padding: 0 10vw;
+    flex-direction: column;
+}
+
+header {
     margin-bottom: 120px;
+    text-align: center;
+    width: 100%;
 }
 
 .leftContainer {
-    display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    justify-content: space-between;
     padding-right: 32px;
     width: 50%;
+    text-align: center;
     >p{
         max-width: 600px;
     }
+
+    >button{
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(to bottom, $mediumGreen 40%, $darkGreen);
+        border-radius: 100%;
+        border: none;
+        margin-right: auto;
+
+        &:hover{
+            cursor: pointer;
+            background: linear-gradient(to bottom, $lightGreen , $mediumGreen);
+        }
+    }
 }
 
-section {
+.content {
     display: flex;
-    background: linear-gradient(to bottom, white, $lightGreen);
-    padding-bottom: 120px !important;
-    padding: 0 10vw;
+    max-width: 1920px;
+    width: 100%;
 }
 
 .contactForm {
-    width: 50vw;
+    width: 50%;
 }
+
+.feedback{
+    position: relative;
+    left: 105%;
+    top: -200px;
+    width: 450px;
+    height: 80px;
+    font-size: 36px;
+    font-family: $baloo;
+    color: white;
+    background: linear-gradient(to bottom right, $lightGreen, $darkGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 16px;
+}
+
+.feedback.animate{
+    animation: left_1920 3s ease forwards;
+}
+
+@keyframes left_1920 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100%));
+    }
+    90%{
+        transform: translateX(calc(-100%));
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
 
 @media(max-width: 1050px) {
     header {
@@ -67,19 +137,23 @@ section {
         font-size: 72px;
     }
 
-    section {
+    .container{
         padding: 0 32px;
     }
 }
 
 @media(max-width: 700px) {
     section {
-        flex-direction: column;
         align-items: center;
+    }
+
+    .content{
+        flex-direction: column;
     }
 
     .contactForm {
         width: 100%;
+        padding-top: 32px;
     }
 
     .leftContainer {
@@ -95,9 +169,11 @@ section {
 @media(max-width: 450px) {
     header {
         padding: 0 16px;
+        margin-bottom: 32px;
     }
 
-    section {
+    .container{
         padding: 0 16px;
     }
+
 }

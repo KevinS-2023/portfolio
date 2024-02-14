@@ -1,27 +1,40 @@
-<section class="{{childData.reverse}}" [ngClass]="{'flexStart': childData.reverse === 'normal', 'flexEnd': childData.reverse === 'reverse'}">
+<section class="{{childData.reverse}}"
+    [ngClass]="{'flexStart': childData.reverse === 'normal', 'flexEnd': childData.reverse === 'reverse'}">
 
-    <div class="leftContainer">
-            <img src="{{childData.path}}" alt="{{childData.title}}">
+    <div class="leftContainer" id="leftContainer">
+        <img src="{{childData.path}}" alt="{{childData.title}}" [ngClass]="{'animateTopDown': isVisible}">
     </div>
 
-    <div class="rightContainer">
-        <h3>{{childData.title}}</h3>
+    <div class="rightContainer"
+        [ngClass]="{'alignStart': childData.reverse === 'normal', 'alignEnd': childData.reverse === 'reverse'}"
+        id="rightContainer">
 
-        <div class="skillContainer">
-            <div *ngFor="let skill of childData.skills" class="skill">
-                <h4>{{skill}}</h4>
-                <div class="partingLine"></div>
+        <div [ngClass]="{
+        'animateRightLeft': childData.reverse === 'normal' && isVisible, 
+        'animateLeftRight': childData.reverse === 'reverse' && isVisible,
+        'fromLeft': childData.reverse == 'reverse',
+        'fromRight': childData.reverse == 'normal'}">
+
+            <h3>{{childData.title}}</h3>
+
+            <div class="skillContainer">
+                <div *ngFor="let skill of childData.skills" class="skill">
+                    <h4>{{skill}}</h4>
+                    <div class="partingLine"></div>
+                </div>
+
+            </div>
+
+            <p>{{ 'project_' + (index + 1) | translate }}</p>
+
+            <div class="buttonContainer">
+                <a href="{{childData.gitHubLink}}" target="_blank" class="flexCenterCenter">Github</a>
+                <a href="{{childData.projectLink}}" target="_blank" class="flexCenterCenter">{{'projectButton' |
+                    translate}}</a>
             </div>
 
         </div>
 
-        <p>{{ 'project_' + (index + 1) | translate }}</p>
-
-        <div class="buttonContainer">
-            <a  href="{{childData.gitHubLink}}" target="_blank">Github</a>
-            <a  href="{{childData.projectLink}}" target="_blank">{{'projectButton' | translate}}</a>
-        </div>
-        
     </div>
 
 </section>

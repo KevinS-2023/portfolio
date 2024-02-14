@@ -1,15 +1,16 @@
-<section>
+<section class="flexCenterCenter">
+  <div class="contentContainer">
     <a href=""><img src="../../assets/img/hero/hero_logo.png" alt="logo" class="logo"></a>
     <div class="linkContainer">
-        <a href="#aboutMe">{{'link_1' | translate }}</a>
-        <a href="#skillSet">{{'link_2' | translate }}</a>
-        <a href="#myProjects">{{'link_3' | translate }}</a>
+      <a href="#aboutMe">{{'link_1' | translate }}</a>
+      <a href="#skillSet">{{'link_2' | translate }}</a>
+      <a href="#myProjects">{{'link_3' | translate }}</a>
 
-        <select (change)="switchLanguage($event)">
-          <option value="en" [selected]="currentLanguage === 'en'">English</option>
-          <option value="de" [selected]="currentLanguage === 'de'">Deutsch</option>
-        </select>
-        
+      <select (change)="switchLanguage($event)">
+        <option value="en" [selected]="currentLanguage === 'en'">English</option>
+        <option value="de" [selected]="currentLanguage === 'de'">Deutsch</option>
+      </select>
+
     </div>
 
     <!-- Burger menu -->
@@ -27,7 +28,7 @@
 
       </div>
 
-      <div class="mobileLinksContainer">
+      <div class="mobileLinksContainer flexCenterCenter">
         <a href="#aboutMe" (click)="switchMenu()">{{'link_1' | translate }}</a>
         <a href="#skillSet" (click)="switchMenu()">{{'link_2' | translate }}</a>
         <a href="#myProjects" (click)="switchMenu()">{{'link_3' | translate }}</a>
@@ -37,8 +38,8 @@
           <option value="en" [selected]="currentLanguage === 'en'">English</option>
           <option value="de" [selected]="currentLanguage === 'de'">Deutsch</option>
         </select>
-        
+
       </div>
     </div>
-
+  </div>
 </section>

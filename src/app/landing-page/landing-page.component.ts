@@ -18,9 +18,9 @@ import { TranslateModule } from '@ngx-translate/core';
 export class LandingpageComponent {
 
   readonly links: Links[] = [
-    { imgPath: '../../assets/img/links/github_green.png', link: 'https://github.com/KevinS-2023' },
-    { imgPath: '../../assets/img/links/email_green.png', link: 'mailto:kevin.schmidt.1990@web.de' },
-    { imgPath: '../../assets/img/links/linkedin_green.png', link: 'https://www.linkedin.com/in/kevin-schmidt-a571172aa/' }
+    { imgPath: '../../assets/img/links/github_green.svg', link: 'https://github.com/KevinS-2023' },
+    { imgPath: '../../assets/img/links/email_green.svg', link: 'mailto:kevin.schmidt.1990@web.de' },
+    { imgPath: '../../assets/img/links/linkedin_green.svg', link: 'https://www.linkedin.com/in/kevin-schmidt-a571172aa/' }
 ];
 
   constructor(){

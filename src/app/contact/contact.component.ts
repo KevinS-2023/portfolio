@@ -11,4 +11,17 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
+  startAnimation: boolean = false;
+
+  handleFormSubmit() {
+    this.startAnimation = true;
+    setTimeout(() => {
+      this.startAnimation = false;
+    }, 3200)
+  }
+
+  scrollToTop(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 }

@@ -1,6 +1,14 @@
-<section>
-    <h1>{{'myWork' | translate}}</h1>
-    <p>{{'myWorkDescription' | translate}}</p>
-</section>
+<section class="flexCenterCenter">
 
-<app-project *ngFor="let project of projects; let i = index" [childData]="project" [index]="i"></app-project>
+    <div class="contentContainer">
+
+        <div class="textContainer">
+            <h1>{{'myWork' | translate}}</h1>
+            <p>{{'myWorkDescription' | translate}}</p>
+        </div>
+
+        <app-project *ngFor="let project of projects; let i = index" [childData]="project" [index]="i"></app-project>
+
+    </div>
+    
+</section>

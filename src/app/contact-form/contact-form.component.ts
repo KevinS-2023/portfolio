@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -14,10 +14,9 @@ import { TranslateModule } from '@ngx-translate/core';
 
 export class ContactFormComponent {
 
-  mailTest = true;
   http = inject(HttpClient);
   checkbox: boolean = false;
-  startAnimation: boolean = false;
+  @Output() formSubmit: EventEmitter<any> = new EventEmitter();
 
   contactData = {
     name: '',
@@ -47,7 +46,7 @@ export class ContactFormComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => this.feedback(),
+          complete: () => this.formSubmit.emit(),
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
 
@@ -55,14 +54,6 @@ export class ContactFormComponent {
       this.checkbox = false;
     }
   }
-
-  feedback() {
-    this.startAnimation = true;
-    setTimeout(() => {
-      this.startAnimation = false;
-    }, 3200)
-  }
-
 
 }
 

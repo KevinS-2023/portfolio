@@ -1,18 +1,31 @@
-<header>
-    <h1>{{'contact_1' | translate}}</h1>
-</header>
+<section (formSubmit)="handleFormSubmit()">
 
-<section>
+    <div class="container flexCenterCenter">
 
-    <div class="leftContainer">
-        <h2>{{'contact_2' | translate}}</h2>
-        <p>{{'contact_3' | translate}}</p>
-        <div>
-            <h4>{{'contact_4' | translate}}</h4>
-            <h3>{{'contact_5' | translate}}</h3>
+        <header>
+            <h1>{{'contact_1' | translate}}</h1>
+        </header>
+
+        <div class="content">
+
+            <div class="leftContainer flexCenterCenter">
+                <div>
+                    <h2>{{'contact_2' | translate}}</h2>
+                    <p>{{'contact_3' | translate}}</p>
+                    <div>
+                        <h4>{{'contact_4' | translate}}</h4>
+                        <h3>{{'contact_5' | translate}}</h3>
+                    </div>
+                </div>
+
+                <button class="flexCenterCenter" (click)="scrollToTop()"><img src="../../assets/img/scroll_up.svg" alt="arrow_up"></button>
+            </div>
+
+            <app-contact-form class="contactForm"></app-contact-form>
+
         </div>
     </div>
 
-    <app-contact-form class="contactForm"></app-contact-form>
+    <div class="feedback" [class.animate]="startAnimation">{{'mail_sent' | translate}}</div>
 
 </section>

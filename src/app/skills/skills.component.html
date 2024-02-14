@@ -1,14 +1,18 @@
-<section>
-    <h3>{{'skills' | translate}}</h3>
-    
-    <div>
-        <div *ngFor="let path of skillsImg; let i = index">
-            <div class="skillContainer">
-                <img [src]="path" alt="" [ngClass]="{'animate': isVisible}" class="skillImg">
-            </div>
-            <h4>{{skillsName[i]}}</h4>
-        </div>
-    </div>
+<section class="flexCenterCenter">
 
+    <div class="contentContainer flexCenterCenter">
+
+        <h3>{{'skills' | translate}}</h3>
+
+        <div>
+            <div *ngFor="let path of skillsImg; let i = index">
+                <div class="skillContainer">
+                    <img [src]="path" alt="" [ngClass]="{'animate': isVisible}" class="skillImg">
+                </div>
+                <h4>{{skillsName[i]}}</h4>
+            </div>
+        </div>
+
+    </div>
 
 </section>

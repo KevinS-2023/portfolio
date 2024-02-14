@@ -1,77 +1,86 @@
 @import '../../styles.scss';
 
-*{
+* {
     font-family: $montserrat;
     color: white;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 120px 10vh;
+footer {
     background: linear-gradient(to right, $mediumGreen, $darkGreen);
+    width: 100vw;
 
-    >img{
-        width: 64px;
-        height: 69px;
+    >div {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 20vw);
+        padding: 120px 10vw;
+        max-width: 1920px !important;
+
+        >img {
+            width: 64px;
+            height: 69px;
+        }
     }
+
 }
 
-.mobileImpressum{
+.mobileImpressum {
     display: none;
 }
 
-.linkContainer{
+.linkContainer {
     display: flex;
     gap: 24px;
 
-    >a{
-        >img{
+    >a {
+        >img {
             width: 40px;
             height: 40px;
         }
     }
 }
 
-div{
+div {
     text-align: center;
 }
 
-p{
+p {
     font-size: 24px;
     line-height: 28px;
 }
 
-a{
+a {
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
 }
 
-@media(max-width: 1050px){
-    footer{
+@media(max-width: 1050px) {
+    footer {
         padding: 120px 32px;
     }
 }
 
-@media(max-width: 650px){
-    footer{
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
+@media(max-width: 650px) {
+    footer {
+        >div {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
     }
 
-    .desktopImpressum{
+    .desktopImpressum {
         display: none;
     }
 
-    .mobileImpressum{
+    .mobileImpressum {
         display: flex;
     }
 }
 
-@media(max-width: 450px){
-    footer{
+@media(max-width: 450px) {
+    footer {
         padding: 120px 16px;
     }
 }
