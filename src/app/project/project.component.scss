@@ -1,4 +1,5 @@
 @import '../../styles.scss';
+@import '../project/project.componend.keyframes.scss';
 
 section {
     width: 100%;
@@ -7,14 +8,11 @@ section {
 
     >div {
         width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        @include flex(center, flex-end);
         flex-direction: column;
         overflow: hidden;
     }
 }
-
 img {
     width: 100%;
     position: relative;
@@ -22,11 +20,9 @@ img {
     box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
     object-fit: cover;
 }
-
 .leftContainer {
     align-items: flex-start;
 }
-
 .rightContainer {
     >div {
         display: flex;
@@ -35,7 +31,6 @@ img {
         position: relative;
         width: 100%;
         text-align: left;
-
         >p {
             max-width: 600px;
             margin: 16px 0;
@@ -45,14 +40,11 @@ img {
 
 // skills ----------------------------------------
 .skillContainer {
-    display: flex;
-    align-items: center;
+    @include flex(center, none);
     flex-wrap: wrap;
     gap: 24px;
-
     >div {
-        display: flex;
-        align-items: center;
+        @include flex(center, none);
         gap: 12px;
     }
 }
@@ -64,12 +56,9 @@ img {
 }
 
 // buttons --------------------------------------------------------------
-
 .buttonContainer {
-    display: flex;
-    align-items: center;
+    @include flex(center, none);
     gap: 24px;
-
     >a {
         width: 120px;
         height: 40px;
@@ -80,7 +69,6 @@ img {
         font-family: $montserrat;
         color: $mediumGreen;
         font-size: 24px;
-
         &:hover {
             cursor: pointer;
             animation: fillAnimation 0.4s ease forwards;
@@ -89,134 +77,37 @@ img {
 }
 
 // font ------------------------------------------
+h3, h4 {
+    color: $mediumGreen;
+    margin: 0;
+}
 h3 {
     font-family: $baloo;
     font-size: 45px;
     line-height: 50px;
-    color: $mediumGreen;
-    margin: 0;
+    
 }
-
 h4 {
     font-family: $montserrat;
     font-size: 24px;
     line-height: 28px;
-    color: $mediumGreen;
-    margin: 0;
 }
-
 p {
     font-family: $montserrat;
     font-size: 16px;
 }
-
-// classes for reverse direction
-.reverse {
-    flex-direction: row-reverse !important;
-}
-
-.flexEnd {
-    justify-content: flex-end;
-}
-
-.flexStart {
-    justify-content: flex-start;
-}
-
-.alignStart {
-    padding-left: 32px;
-    text-align: left;
-}
-
-.alignEnd {
-    padding-right: 32px;
-}
-
-.fromLeft {
-    left: -105%;
-}
-
-.fromRight {
-    right: -105%;
-}
-
-.animateTopDown {
-    animation: topDown 0.25s ease-in forwards;
-}
-
-.animateLeftRight {
-    animation: leftRight 0.25s ease-in forwards;
-}
-
-.animateRightLeft {
-    animation: rightLeft 0.25s ease-in forwards;
-}
-
-
-@keyframes topDown {
-    0% {
-        transform: translateY(0%);
-    }
-
-    50% {
-        transform: translateY(55%);
-    }
-
-    100% {
-        transform: translateY(105%);
-    }
-}
-
-@keyframes rightLeft {
-    0% {
-        transform: translateX(0%);
-    }
-
-    50% {
-        transform: translateX(-55%);
-    }
-
-    100% {
-        transform: translateX(-105%);
-    }
-}
-
-@keyframes leftRight {
-    0% {
-        transform: translateX(0%);
-    }
-
-    50% {
-        transform: translateX(55%);
-    }
-
-    100% {
-        transform: translateX(105%);
-    }
-}
-
 @media(max-width: 1050px) {
     section {
         flex-direction: column;
 
         >div {
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            @include flex(center, flex-end);
         }
     }
 
     .fromLeft {
         left: 105%;
-    }    
-
-    .animateTopDown {
-        animation: leftRight 0.25s ease-in forwards;
-    }
-
-    .animateLeftRight {
-        animation: rightLeft 0.25s ease-in forwards !important;
     }
 
     .alignStart {

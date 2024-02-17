@@ -37,14 +37,21 @@ p {
     font-size: 16px;
     line-height: 20px;
     color: black !important;
+    max-width: 600px;
 }
 
 section{
     background: linear-gradient(to bottom, white, $lightGreen);
-    width: 100vw; 
+    width: 100vw;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .container{
+    flex-grow: 1;
     max-width: 1920px;
     padding: 0 10vw;
     flex-direction: column;
@@ -92,9 +99,9 @@ header {
 }
 
 .feedback{
-    position: relative;
-    left: 105%;
-    top: -200px;
+    position: absolute;
+    left: 105vw;
+    top: 50%;
     width: 450px;
     height: 80px;
     font-size: 36px;
@@ -109,18 +116,18 @@ header {
 }
 
 .feedback.animate{
-    animation: left_1920 3s ease forwards;
+    animation: moveLeft 3s ease forwards;
 }
 
-@keyframes left_1920 {
+@keyframes moveLeft {
     0% {
         transform: translateX(0);
     }
     50% {
-        transform: translateX(calc(-100%));
+        transform: translateX(calc(-55vw));
     }
     90%{
-        transform: translateX(calc(-100%));
+        transform: translateX(calc(-55vw));
     }
     100% {
         transform: translateX(0);

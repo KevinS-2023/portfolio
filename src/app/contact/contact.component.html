@@ -1,4 +1,4 @@
-<section (formSubmit)="handleFormSubmit()">
+<section>
 
     <div class="container flexCenterCenter">
 
@@ -21,11 +21,12 @@
                 <button class="flexCenterCenter" (click)="scrollToTop()"><img src="../../assets/img/scroll_up.svg" alt="arrow_up"></button>
             </div>
 
-            <app-contact-form class="contactForm"></app-contact-form>
+            <app-contact-form class="contactForm" (formSubmit)="handleFormSubmit()"></app-contact-form>
 
         </div>
     </div>
 
     <div class="feedback" [class.animate]="startAnimation">{{'mail_sent' | translate}}</div>
-
+    
 </section>
+

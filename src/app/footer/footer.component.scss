@@ -8,20 +8,19 @@
 footer {
     background: linear-gradient(to right, $mediumGreen, $darkGreen);
     width: 100vw;
+}
 
-    >div {
-        display: flex;
-        justify-content: space-between;
-        width: calc(100% - 20vw);
-        padding: 120px 10vw;
-        max-width: 1920px !important;
+.contentContainer {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 20vw);
+    padding: 120px 10vw;
+    max-width: 1920px !important;
 
-        >img {
-            width: 64px;
-            height: 69px;
-        }
+    >img {
+        width: 64px;
+        height: 69px;
     }
-
 }
 
 .mobileImpressum {
@@ -56,19 +55,22 @@ a {
 }
 
 @media(max-width: 1050px) {
-    footer {
+
+    .contentContainer {
         padding: 120px 32px;
     }
+
+
 }
 
 @media(max-width: 650px) {
-    footer {
-        >div {
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-        }
+
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
     }
+
 
     .desktopImpressum {
         display: none;
@@ -80,7 +82,9 @@ a {
 }
 
 @media(max-width: 450px) {
-    footer {
-        padding: 120px 16px;
-    }
+    
+       .contentContainer {
+            padding: 120px 16px;
+        }
+    
 }

@@ -14,6 +14,7 @@ export class ContactComponent {
   startAnimation: boolean = false;
 
   handleFormSubmit() {
+    console.log('feedback');
     this.startAnimation = true;
     setTimeout(() => {
       this.startAnimation = false;

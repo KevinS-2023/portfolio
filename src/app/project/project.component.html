@@ -2,7 +2,7 @@
     [ngClass]="{'flexStart': childData.reverse === 'normal', 'flexEnd': childData.reverse === 'reverse'}">
 
     <div class="leftContainer" id="leftContainer">
-        <img src="{{childData.path}}" alt="{{childData.title}}" [ngClass]="{'animateTopDown': isVisible}">
+        <img src="{{childData.path}}" alt="{{childData.title}}" [ngClass]="{'animateTopDown': isLargeViewport(), 'animateImageLeftRight': !isLargeViewport() && isVisible}">
     </div>
 
     <div class="rightContainer"
@@ -10,6 +10,7 @@
         id="rightContainer">
 
         <div [ngClass]="{
+        'animateTextRightLeft': isVisible && !isLargeViewport(),   
         'animateRightLeft': childData.reverse === 'normal' && isVisible, 
         'animateLeftRight': childData.reverse === 'reverse' && isVisible,
         'fromLeft': childData.reverse == 'reverse',
